@@ -1,6 +1,21 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# /etc/skel/.bashrc
+#
+# This file is sourced by all *interactive* bash shells on startup,
+# including some apparently interactive shells such as scp and rcp
+# that can't tolerate any output.  So make sure this doesn't display
+# anything or bad things will happen !
+
+
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+
+
+# Put your fun stuff here.
 
 # If not running interactively, don't do anything
 case $- in
@@ -91,7 +106,7 @@ fi
 #alias ll='ls -l'
 #alias la='ls -A'
 #alias l='ls -CF'
-alias vi='vim'
+#alias vi='vim'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -113,14 +128,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# added by Anaconda2 4.1.1 installer
-#ipython hpc
-
-export IPYNB_PORT=8103
-export IPYNB_MINUTES="720"
-export IPYNB_QSUB_TEMPLATE="qlogin -n 1 -mem 96G -time %d:00"
-export IPYNB_NOTEBOOK_TEMPLATE='bash -c "source /data/keeling/a/szhu28/.bashrc; jupyter notebook --port=%s --no-browser --ip=127.0.0.1 "'
-export PATH=$PATH:/data/keeling/a/$USER/software/bin
-export PATH="/data/keeling/a/szhu28/usr/anaconda2/bin:$PATH"
-
-#source activate py36
+export KEELING="szhu28@keeling.earth.illinois.edu"
+alias kl="ssh -X $KEELING"
+alias pfwd="ssh -N -f -L 8103:localhost:8103 $KEELING"
+alias klpy="ssh $KEELING 'screen -dm bash -c ipynbhpc'"
