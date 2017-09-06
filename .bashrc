@@ -128,9 +128,19 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export KEELING="szhu28@keeling.earth.illinois.edu"
-alias kl="ssh -X $KEELING"
-alias pfwd="ssh -N -f -L 8103:localhost:8103 $KEELING"
-alias klpy="ssh $KEELING 'screen -dm bash -c ipynbhpc'"
+#export KEELING="szhu28@keeling.earth.illinois.edu"
+#alias kl="ssh -X $KEELING"
+#alias pfwd="ssh -N -f -L 8103:localhost:8103 $KEELING"
+#alias klpy="ssh $KEELING 'screen -dm bash -c ipynbhpc'"
 
 cd() { builtin cd "$@" && ls; }
+bind "\e[5~": history-search-backward
+bind "\e[6~": history-search-forward
+
+export KL="szhu28@keeling.earth.illinois.edu"
+export DT=" -p 49222 shichu@lostandfoundii.ddns.net "
+alias pfwdto="ssh -N -f -L 8103:localhost:8103 "
+alias klpy="ssh $KL 'screen -dm bash -c ipynbhpc'"
+alias dtpy="ssh $DT 'screen -dm bash -c \"/home/shichu/usr/anaconda3/bin/jupyter notebook --no-browser --port 8103\"'"
+alias upfwd='kill $(ps aux | grep "ssh" | awk '"'"'{print $2}'"'"') '
+alias udt='ssh $DT kill $(ps aux |grep '\''jupyter-notebook'\'' | awk '\''{print $2}'\'')'
