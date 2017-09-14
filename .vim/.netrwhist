@@ -1,7 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/net/san-b4-ib/data/mcfarq/a/szhu28/research/HIWC/10_150901Wholeflight/src/analysis/20160114Delphine'
-let g:netrw_dirhist_2='/net/san-a1-ib/data/keeling/a/szhu28'
-let g:netrw_dirhist_3='/net/san-b4-ib/data/mcfarq/a/szhu28/research/TITAN/titan-20160117.src/RELEASE_NOTES'
-let g:netrw_dirhist_4='/net/san-a1-ib/data/keeling/a/szhu28/tmp'
-let g:netrw_dirhist_5='/net/san-a1-ib/data/keeling/a/szhu28/parallel_pyjush/shichu/ipyparallel'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/shichu/.vim/bundle/Vundle.vim'
