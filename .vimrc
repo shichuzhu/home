@@ -75,7 +75,7 @@ set ai
 set nu
 set ru
 set wildmenu
-" set background=dark
+set background=dark
 set mouse=a
 syntax on
 
