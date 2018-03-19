@@ -61,12 +61,24 @@
 ## install texstudio https://www.texstudio.org/
 
 ## Install java 8 (for hadoop 3.0.0)
+## default path will be /usr/lib/jvm/java-9-oracle
 # sudo add-apt-repository ppa:webupd8team/java
 # sudo apt update
 # sudo apt-get install oracle-java9-installer
+
+## install JabRef
+## in order to use JabRef, has to install java8, then set java9 as default and explicit use java8 path for JabRef
+## sudo apt install oracle-java9-set-default
+
+## Configure JabRef, set up launcher https://askubuntu.com/a/721387
+## Appearance -> javax.swing.plaf.metal.MetalLookAndFeel
+## File -> Main file directory -> gdrive.papers
 
 ## Allow Pageup/down for history searching http://dqxtech.net/blog/2011-03-06/linux-bash-history-pgup-pgdown
 ## Uncomment file /etc/inputrc for \e[5~ and \e[6~
 
 # git config --global user.email "you@example.com"
 # git config --global user.name "Your Name"
+# git config --global core.editor "vim"
+
+# sudo apt install gnome-tweak-tool
