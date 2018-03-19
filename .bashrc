@@ -128,11 +128,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#export KEELING="szhu28@keeling.earth.illinois.edu"
-#alias kl="ssh -X $KEELING"
-#alias pfwd="ssh -N -f -L 8103:localhost:8103 $KEELING"
-#alias klpy="ssh $KEELING 'screen -dm bash -c ipynbhpc'"
-
+# -------- Shichu Custom settings -------- 
 cd() { builtin cd "$@" && ls; }
 
 export FLAG_ZSH=False

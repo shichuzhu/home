@@ -1,3 +1,8 @@
+#export KEELING="szhu28@keeling.earth.illinois.edu"
+#alias kl="ssh -X $KEELING"
+#alias pfwd="ssh -N -f -L 8103:localhost:8103 $KEELING"
+#alias klpy="ssh $KEELING 'screen -dm bash -c ipynbhpc'"
+
 export KL="szhu28@keeling.earth.illinois.edu"
 export DT=" -p 49222 shichu@lostandfoundii.ddns.net"
 export EWS=" szhu28@linux.ews.illinois.edu"
