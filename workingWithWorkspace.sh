@@ -23,6 +23,10 @@ cscd() {
 	if [ $outstate -eq 1 ]; then
 		cd $output
 	elif [ $outstate -eq 2 ]; then 
-		$output
+		if [ "$FLAG_ZSH" "==" "True" ]; then
+			eval ${output}
+		else
+			$output
+		fi
 	fi
 }
