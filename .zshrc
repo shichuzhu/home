@@ -100,6 +100,10 @@ source $ZSH/oh-my-zsh.sh
 chpwd() {
 	ls
 }
+# The following command is required to let zsh parse variable before eval command.
+# It solves the ssh $DT and eval ${output} problem
+# http://zsh.sourceforge.net/FAQ/zshfaq03.html
+setopt shwordsplit
 
 export FLAG_ZSH=True
 . $HOME/.sz_shrc.bash

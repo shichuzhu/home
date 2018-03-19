@@ -1,6 +1,6 @@
 #!/bin/bash
 # sudo apt update
-# sudo apt install vim emacs git dkms openssh-server tmux iotop
+# sudo apt install vim emacs git dkms openssh-server tmux iotop zsh
 ## adjust ssh port # /etc/ssh/sshd_config --> 49222
 # sudo systemctl restart ssh
 
@@ -80,5 +80,34 @@
 # git config --global user.email "you@example.com"
 # git config --global user.name "Your Name"
 # git config --global core.editor "vim"
+# git config --global diff.tool tkdiff
+# git config --global merge.tool tkdiff
+# git config --global --add difftool.prompt false
 
 # sudo apt install gnome-tweak-tool
+
+## setup zsh / oh-my-zsh
+## https://github.com/robbyrussell/oh-my-zsh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+## copy the config from my github/home
+
+## Chromebook specific --> powerline font for zsh agnoster theme
+## install powerline font https://github.com/powerline/fonts
+# sudo apt-get install fonts-powerline # https://packages.ubuntu.com/xenial/all/fonts-powerline/filelist
+## This will install font to /usr/share/fonts/opentype/PowerLineSymbols.otf
+## With the prefix of chroot /usr/local/chroots/xenial/ (From ChromeOS's perspective)
+## Carefully follow steps https://gist.github.com/aaronhalford/a009bc73498407ae80e2 to allow writable ChromeOS FS
+### Notes:
+# sudo /usr/share/vboot/bin/make_dev_ssd.sh --remove_rootfs_verification
+## RERUN with partition arg, e.g. ==> Denote as cmd1
+# sudo crossystem dev_boot_signed_only=0
+## RERUN cmd1
+# sudo crossystem dev_boot_signed_only=0
+## REBOOT
+# sudo mount -o remount,rw /
+### Notes END
+## ln -s from Xenial's opentype to Chrome OS /usr/share/fonts/opentype
+## Follow https://github.com/dnschneid/crouton/wiki/Fonts to add linked opentype to /etc/fonts/local.conf in ChromeOS
+## Reboot and now the fonts should show up in ChromeOS's font options, also add "PowerLineSymbols" to the FRONT of 
+## Secure shell's configuration by Ctrl-Shift-P
+## Crosh shares the same config with Secure Shell.
