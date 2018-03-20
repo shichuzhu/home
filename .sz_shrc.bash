@@ -2,6 +2,7 @@
 #alias kl="ssh -X $KEELING"
 #alias pfwd="ssh -N -f -L 8103:localhost:8103 $KEELING"
 #alias klpy="ssh $KEELING 'screen -dm bash -c ipynbhpc'"
+alias odir="xdg-open ."
 
 export KL="szhu28@keeling.earth.illinois.edu"
 export DT=" -p 49222 shichu@lostandfoundii.ddns.net"

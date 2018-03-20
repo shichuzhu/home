@@ -111,3 +111,16 @@
 ## Reboot and now the fonts should show up in ChromeOS's font options, also add "PowerLineSymbols" to the FRONT of 
 ## Secure shell's configuration by Ctrl-Shift-P
 ## Crosh shares the same config with Secure Shell.
+
+## Prevent chrome from popping didn't shut down correctly
+## https://superuser.com/questions/697618/getting-google-chrome-didnt-shut-down-correctly-every-week
+## ~/.config/google-chrome/Default/Preferences --> exit_type:"normal"
+
+## ----------------------- Less important -----------------
+## For jupyter lab -> vim mode
+## https://github.com/jwkvam/jupyterlab_vim
+## dependency
+# sudo apt install libgif-dev libjpeg-dev
+# conda install nodejs
+# jupyter labextension install jupyterlab_vim
+## jupyter labextension uninstall jupyterlab_vim
