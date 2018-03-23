@@ -124,3 +124,7 @@
 # conda install nodejs
 # jupyter labextension install jupyterlab_vim
 ## jupyter labextension uninstall jupyterlab_vim
+
+## Setup git support for TexStudio
+## https://tex.stackexchange.com/questions/112396/texstudio-texmaker-and-github/112560
+# git config --global alias.ci "commit"

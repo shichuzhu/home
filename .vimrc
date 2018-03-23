@@ -92,14 +92,8 @@ func AddCommentSHELL()
 	endif
 endfunc
 
-"map<F3> :call AddCommentFORTRAN()<cr>
-"func AddCommentFORTRAN()
-"	if (getline('.')[0] == '!')
-"		normal ^x
-"	else
-"		normal 0i!
-"	endif
-"endfunc
+" Copy to clipboard in visual mode
+map<F5> :w !xsel -i -b<cr><cr>
 
 nnoremap <F3> :FormatCode clang-format<cr>
 
