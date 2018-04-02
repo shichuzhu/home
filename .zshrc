@@ -105,5 +105,8 @@ chpwd() {
 # http://zsh.sourceforge.net/FAQ/zshfaq03.html
 setopt shwordsplit
 
+# For zsh-syntax-highlighting
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 export FLAG_ZSH=True
 . $HOME/.sz_shrc.bash
