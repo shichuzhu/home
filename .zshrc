@@ -107,6 +107,7 @@ setopt shwordsplit
 
 # For zsh-syntax-highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/vendor_completions/_tmuxinator
 
 export FLAG_ZSH=True
 . $HOME/.sz_shrc.bash

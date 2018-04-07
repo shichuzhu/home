@@ -4,6 +4,7 @@
 #alias klpy="ssh $KEELING 'screen -dm bash -c ipynbhpc'"
 alias odir="xdg-open ."
 
+export EDITOR="vim"
 export KL="szhu28@keeling.earth.illinois.edu"
 export DT=" -p 49222 shichu@lostandfoundii.ddns.net"
 export EWS=" szhu28@linux.ews.illinois.edu"
