@@ -35,3 +35,7 @@ export BROWSER=google-chrome
 
 # For Apache hadoop / spark
 export PATH="/home/shichu/usr/apache/hadoop-3.0.0/bin:/home/shichu/usr/apache/spark-2.3.0-bin-hadoop2.7/bin:$PATH"
+
+# For src compiled programs (protoc)
+export PATH="$PATH:$HOME/usr/local/bin"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/usr/local/lib"
