@@ -73,6 +73,8 @@
 ## Configure JabRef, set up launcher https://askubuntu.com/a/721387
 ## Appearance -> javax.swing.plaf.metal.MetalLookAndFeel
 ## File -> Main file directory -> gdrive.papers
+## Add a symlink from JabRef-version.jar to JabRef.jar to facilitate version update.
+## Add JaRef desktop entry to ~/.local/share/application/jabref.desktop...
 
 ## Allow Pageup/down for history searching http://dqxtech.net/blog/2011-03-06/linux-bash-history-pgup-pgdown
 ## Uncomment file /etc/inputrc for \e[5~ and \e[6~
