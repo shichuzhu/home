@@ -72,6 +72,7 @@
 
 ## Configure JabRef, set up launcher https://askubuntu.com/a/721387
 ## Appearance -> javax.swing.plaf.metal.MetalLookAndFeel
+## Use Metal only, other fields have bugs downloading filelink (not responsive)
 ## File -> Main file directory -> gdrive.papers
 ## Add a symlink from JabRef-version.jar to JabRef.jar to facilitate version update.
 ## Add JaRef desktop entry to ~/.local/share/application/jabref.desktop...
