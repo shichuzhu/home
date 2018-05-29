@@ -110,6 +110,7 @@
 # sudo mount -o remount,rw /
 ### Notes END
 ## ln -s from Xenial's opentype to Chrome OS /usr/share/fonts/opentype
+# sudo ln -s /usr/local/chroots/artful/usr/share/fonts/opentype /usr/share/fonts/opentype
 ## Follow https://github.com/dnschneid/crouton/wiki/Fonts to add linked opentype to /etc/fonts/local.conf in ChromeOS
 ## Reboot and now the fonts should show up in ChromeOS's font options, also add "PowerLineSymbols" to the FRONT of 
 ## Secure shell's configuration by Ctrl-Shift-P
@@ -131,3 +132,7 @@
 ## Setup git support for TexStudio
 ## https://tex.stackexchange.com/questions/112396/texstudio-texmaker-and-github/112560
 # git config --global alias.ci "commit"
+
+## For tomcat, install the server version and local version is different. If trying to prevent server from autostart, use
+#(with sudo) systemctl disable tomcat8
+## Use this to check (with sudo) which app is using a given port: lsof -i :8080
