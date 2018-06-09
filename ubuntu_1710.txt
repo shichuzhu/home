@@ -92,7 +92,10 @@
 ## setup zsh / oh-my-zsh
 ## https://github.com/robbyrussell/oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-## copy the config from my github/home
+## copy the config from my github/home, install fonts-powerline and change theme to agnoster
+
+install zsh-syntax-highlighting, the config file is used in .zshrc
+
 
 ## Chromebook specific --> powerline font for zsh agnoster theme
 ## install powerline font https://github.com/powerline/fonts
@@ -136,3 +139,22 @@
 ## For tomcat, install the server version and local version is different. If trying to prevent server from autostart, use
 #(with sudo) systemctl disable tomcat8
 ## Use this to check (with sudo) which app is using a given port: lsof -i :8080
+
+## To set up vim
+Go to the .vim/bundle, search for each repo and git clone in the same directory.
+
+################################################ Chromebook installation log ################################
+Enable debugging feature, latter to setup the chronos passwd:
+https://github.com/dnschneid/crouton/issues/2050#issuecomment-322681627
+Ctrl + alt + forward key, see instruction there.
+
+crouton -r --list -t list
+sudo -e crouton -r bionic -t xiwi,keyboard,touch
+delete /usr/local/chroot/home and ln -s from the sdcard. This allows mounting home dir on a sd card ...
+
+sudo apt install vim emacs git tmux zsh curl tmuxinator zsh-syntax-highlighting
+
+The oh-my-zsh throws char out of range. Refer to: 
+https://github.com/robbyrussell/oh-my-zsh/issues/4786#issuecomment-172629100
+uncomment en_US.UTF-8 and run
+sudo locale-gen
