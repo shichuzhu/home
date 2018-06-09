@@ -97,6 +97,8 @@ install zsh-syntax-highlighting, the config file is used in .zshrc
 # .tmux fancy setup refer: https://github.com/gpakosz/.tmux
 also add .tmux.conf --> .tmux/.tmux.conf soft link
 The setting is slightly different on desktop VS laptop. Need to distinguish in the branch.
+To run a command at a window starting, add the command to "panel" field in .tmuxinator/def.yml file.
+Need to unset C-a as a prefix on chromebook (by overwriting with C-b) and make C-a directly send-prefix to remote.
 
 ## Chromebook specific --> powerline font for zsh agnoster theme
 ## install powerline font https://github.com/powerline/fonts
@@ -160,7 +162,7 @@ crouton -r --list -t list
 sudo -e crouton -r bionic -t xiwi,keyboard,touch
 delete /usr/local/chroot/home and ln -s from the sdcard. This allows mounting home dir on a sd card ...
 
-sudo apt install vim emacs git tmux zsh curl tmuxinator zsh-syntax-highlighting golang software-properties-common language-pack-en
+sudo apt install vim emacs git tmux zsh curl tmuxinator zsh-syntax-highlighting golang software-properties-common language-pack-en xsel
 
 The oh-my-zsh throws char out of range. Refer to: 
 https://github.com/robbyrussell/oh-my-zsh/issues/4786#issuecomment-172629100
