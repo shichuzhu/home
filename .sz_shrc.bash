@@ -2,6 +2,7 @@
 #alias kl="ssh -X $KEELING"
 #alias pfwd="ssh -N -f -L 8103:localhost:8103 $KEELING"
 #alias klpy="ssh $KEELING 'screen -dm bash -c ipynbhpc'"
+
 export EDITOR="vim"
 export KL="szhu28@keeling.earth.illinois.edu"
 export DT=" -p 49222 shichu@lostandfoundii.ddns.net"
@@ -18,14 +19,10 @@ alias udt='ssh $DT '"'"'kill $(ps aux |grep "[j]upyter-notebook" |awk '"'"'"'"'"
 # For Haskell stack
 export PATH="/home/shichu/.local/bin:$PATH"
 
+# For golang & drive odeke
+export GOPATH=$HOME/usr/gopath
+export PATH=$GOPATH:$GOPATH/bin:$PATH
+
 # For distinguish zsh/bash in workingWithWorkspace.sh cscd function
 # Requires FLAG_ZSH be set in .bashrc or .zshrc
 . $HOME/workspace/bin/workingWithWorkspace.sh
-
-# For src compiled programs (protoc)
-export PATH="$HOME/usr/local/bin:$PATH"
-#export LD_LIBRARY_PATH="$HOME/usr/local/lib:$LD_LIBRARY_PATH"
-#export CPATH="$HOME/usr/local/include:$CPATH"
-#export CPATH="$HOME/usr/anaconda3/include:$CPATH"
-#export LIBRARY_PATH="$HOME/usr/anaconda3/lib:$LIBRARY_PATH"
-#export LD_LIBRARY_PATH="$HOME/usr/anaconda3/lib:$LD_LIBRARY_PATH"
