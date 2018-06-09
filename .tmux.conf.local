@@ -266,8 +266,9 @@ tmux_conf_copy_to_os_clipboard=true
 # Shichu: support ssh multi-level tmux
 # reference: https://medium.freecodecamp.org/tmux-in-practice-local-and-nested-remote-tmux-sessions-4f7ba5db8795
 # For chromebook, disable C-a as a prefix2 and instead directly send-prefix to remote
-set -g prefix2 C-b
-bind C-a send-prefix
+# This is not needed for desktop
+# set -g prefix2 C-b
+# bind C-a send-prefix
 
 # move status line to top
 # set -g status-position top

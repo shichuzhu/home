@@ -2,6 +2,7 @@
 #alias kl="ssh -X $KEELING"
 #alias pfwd="ssh -N -f -L 8103:localhost:8103 $KEELING"
 #alias klpy="ssh $KEELING 'screen -dm bash -c ipynbhpc'"
+alias odir="xdg-open . 2>/dev/null"
 
 export EDITOR="vim"
 export KL="szhu28@keeling.earth.illinois.edu"
@@ -26,3 +27,25 @@ export PATH=$GOPATH:$GOPATH/bin:$PATH
 # For distinguish zsh/bash in workingWithWorkspace.sh cscd function
 # Requires FLAG_ZSH be set in .bashrc or .zshrc
 . $HOME/workspace/bin/workingWithWorkspace.sh
+
+# added by Anaconda3 installer
+export PATH="/home/shichu/usr/anaconda3/bin:$PATH"
+# For jupyter notebook to utilize GPU process.
+export BROWSER=google-chrome
+
+# For Apache hadoop / spark
+export PATH="/home/shichu/usr/apache/hadoop-3.0.0/bin:/home/shichu/usr/apache/spark-2.3.0-bin-hadoop2.7/bin:$PATH"
+
+# For src compiled programs (protoc)
+export PATH="$HOME/usr/local/bin:$PATH"
+#export LD_LIBRARY_PATH="$HOME/usr/local/lib:$LD_LIBRARY_PATH"
+#export CPATH="$HOME/usr/local/include:$CPATH"
+#export CPATH="$HOME/usr/anaconda3/include:$CPATH"
+#export LIBRARY_PATH="$HOME/usr/anaconda3/lib:$LIBRARY_PATH"
+#export LD_LIBRARY_PATH="$HOME/usr/anaconda3/lib:$LD_LIBRARY_PATH"
+
+# For intel MKL
+# https://gist.github.com/pachamaltese/afc4faef2f191b533556f261a46b3aa8
+source /opt/intel/bin/compilervars.sh intel64
+# compiled using g++ -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5
+# https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor
