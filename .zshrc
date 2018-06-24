@@ -105,6 +105,9 @@ chpwd() {
 # http://zsh.sourceforge.net/FAQ/zshfaq03.html
 setopt shwordsplit
 
+# zmv command to batch rename files
+autoload zmv
+
 # For zsh-syntax-highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/vendor-completions/_tmuxinator

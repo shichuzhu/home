@@ -50,5 +50,9 @@
     ],
     "jupyter.appendResults": false,
     "gitlens.historyExplorer.enabled": true,
-    "vim.useSystemClipboard": true
+    "vim.useSystemClipboard": true,
+    "vim.cmdLineInitialColon": true,
+    "vim.easymotion": false,
+    "vim.hlsearch": true,
+    "java.errors.incompleteClasspath.severity": "ignore"
 }
