@@ -126,6 +126,8 @@ Need to unset C-a as a prefix on chromebook (by overwriting with C-b) and make C
 ## https://superuser.com/questions/697618/getting-google-chrome-didnt-shut-down-correctly-every-week
 ## ~/.config/google-chrome/Default/Preferences --> exit_type:"normal"
 
+## Pomodoro
+sudo apt-get install gnome-shell-pomodoro
 ## ----------------------- Less important -----------------
 ## For jupyter lab -> vim mode
 ## https://github.com/jwkvam/jupyterlab_vim
