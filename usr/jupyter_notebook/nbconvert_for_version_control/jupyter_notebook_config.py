@@ -10,7 +10,7 @@ def post_save(model, os_path, contents_manager):
     d, fname = os.path.split(os_path)
     check_call(
         [
-            'jupyter', 'nbconvert', '--to', 'python',
+            'jupyter', 'nbconvert', '--to', 'python', '--output-dir=py_vcs',
             '--template=jupyter_notebook_exporter_python_mycfg.tpl', fname
         ],
         cwd=d)
