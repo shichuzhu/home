@@ -7,16 +7,17 @@
 <map/>
 <node name="jabref">
 <map>
+<entry key="AskAutoNamingPDFsAgain" value="false"/>
 <entry key="CleanUpConvertToBiblatex" value="false"/>
 <entry key="CleanUpConvertToBibtex" value="false"/>
 <entry key="CleanUpDOI" value="true"/>
 <entry key="CleanUpFixFileLinks" value="true"/>
-<entry key="CleanUpFormatters" value="disabled;date[normalize_date]&#10;pages[normalize_page_numbers]&#10;month[normalize_month]&#10;all-text-fields[identity]&#10;"/>
+<entry key="CleanUpFormatters" value="enabled;date[normalize_date]&#10;pages[normalize_page_numbers]&#10;month[normalize_month]&#10;all-text-fields[identity,latex_to_unicode]&#10;title[html_to_unicode]&#10;"/>
 <entry key="CleanUpISSN" value="true"/>
 <entry key="CleanUpMakePathsRelative" value="true"/>
-<entry key="CleanUpMovePDF" value="false"/>
-<entry key="CleanUpRenamePDF" value="false"/>
-<entry key="CleanUpRenamePDFonlyRelativePaths" value="true"/>
+<entry key="CleanUpMovePDF" value="true"/>
+<entry key="CleanUpRenamePDF" value="true"/>
+<entry key="CleanUpRenamePDFonlyRelativePaths" value="false"/>
 <entry key="CleanUpUpgradeExternalLinks" value="false"/>
 <entry key="KeyPatternRegex" value=""/>
 <entry key="KeyPatternReplacement" value=""/>
@@ -34,6 +35,7 @@
 <entry key="autoCompleteFields" value="author;editor;title;journal;publisher;keywords;crossref;related;entryset"/>
 <entry key="autoOpenForm" value="true"/>
 <entry key="autoResizeMode" value="4"/>
+<entry key="autoSyncSpecialFieldsToKeywords" value="true"/>
 <entry key="autolinkExactKeyOnly" value="false"/>
 <entry key="avoidOverwritingKey" value="false"/>
 <entry key="backup" value="true"/>
@@ -42,6 +44,8 @@
 <entry key="bindings" value=""/>
 <entry key="citeCommand" value="\cite"/>
 <entry key="collectTelemetry" value="false"/>
+<entry key="columnNames" value="entrytype;author/editor;title;year;journal/booktitle;bibtexkey"/>
+<entry key="columnWidths" value="110;108;919;61;117;100"/>
 <entry key="confirmDelete" value="false"/>
 <entry key="consoleCommand" value=""/>
 <entry key="cyclePreview" value="Preview;/ieee.csl"/>
@@ -57,7 +61,7 @@
 <entry key="duplicatesSizeY" value="600"/>
 <entry key="emailSubject" value="References"/>
 <entry key="enforceLegalBibtexKey" value="true"/>
-<entry key="entryEditorHeight" value="359"/>
+<entry key="entryEditorHeight" value="291"/>
 <entry key="exportInOriginalOrder" value="false"/>
 <entry key="exportInSpecifiedOrder" value="false"/>
 <entry key="exportPriDescending" value="false"/>
@@ -97,14 +101,14 @@
 <entry key="invalidFieldBackgroundColor" value="255:0:0"/>
 <entry key="keyGenAlwaysAddLetter" value="false"/>
 <entry key="keyGenFirstLetterA" value="true"/>
-<entry key="lastEdited" value="/mnt/data/shared/gmaildrive/papers/_bibtex/atmos_combined.bib"/>
-<entry key="lastFocused" value="/mnt/data/shared/gmaildrive/papers/_bibtex/atmos_combined.bib"/>
+<entry key="lastEdited" value="/home/shichu/data/shared/gmaildrive/papers/_bibtex/atmos_combined.bib;/mnt/data/shared/gmaildrive/papers/_bibtex/ComputerScience.bib"/>
+<entry key="lastFocused" value="/home/shichu/data/shared/gmaildrive/papers/_bibtex/atmos_combined.bib"/>
 <entry key="listOfFileColumns" value=""/>
 <entry key="localAutoSave" value="false"/>
 <entry key="lookAndFeel" value="javax.swing.plaf.metal.MetalLookAndFeel"/>
 <entry key="mainWindowPosX" value="51"/>
 <entry key="mainWindowPosY" value="27"/>
-<entry key="mainWindowSizeX" value="925"/>
+<entry key="mainWindowSizeX" value="895"/>
 <entry key="mainWindowSizeY" value="1053"/>
 <entry key="markImportedEntries" value="true"/>
 <entry key="markedEntryBackground0" value="255:255:180"/>
@@ -125,14 +129,16 @@
 <entry key="namesLastOnly" value="false"/>
 <entry key="namesNatbib" value="true"/>
 <entry key="newline" value="&#10;"/>
+<entry key="numberColWidth" value="38"/>
 <entry key="openFoldersOfAttachedFiles" value="false"/>
 <entry key="openLastEdited" value="true"/>
 <entry key="overrideDefaultFonts" value="false"/>
 <entry key="overwriteOwner" value="false"/>
 <entry key="overwriteTimeStamp" value="false"/>
-<entry key="preferUrlDoi" value="false"/>
+<entry key="preferUrlDoi" value="true"/>
+<entry key="prefsExportPath" value="/home/shichu/data/work/gitrepo/home/usr/JabRef/JabRef_preferences.xml"/>
 <entry key="previewEnabled" value="true"/>
-<entry key="previewPanelHeight" value="200"/>
+<entry key="previewPanelHeight" value="305"/>
 <entry key="previewStyle" value="&lt;font face=&quot;sans-serif&quot;&gt;&lt;b&gt;&lt;i&gt;\bibtextype&lt;/i&gt;&lt;a name=&quot;\bibtexkey&quot;&gt;\begin{bibtexkey} (\bibtexkey)&lt;/a&gt;\end{bibtexkey}&lt;/b&gt;&lt;br&gt;__NEWLINE__\begin{author} \format[Authors(LastFirst,Initials,Semicolon,Amp),HTMLChars]{\author}&lt;BR&gt;\end{author}__NEWLINE__\begin{editor} \format[Authors(LastFirst,Initials,Semicolon,Amp),HTMLChars]{\editor} &lt;i&gt;(\format[IfPlural(Eds.,Ed.)]{\editor})&lt;/i&gt;&lt;BR&gt;\end{editor}__NEWLINE__\begin{title} \format[HTMLChars]{\title} \end{title}&lt;BR&gt;__NEWLINE__\begin{chapter} \format[HTMLChars]{\chapter}&lt;BR&gt;\end{chapter}__NEWLINE__\begin{journal} &lt;em&gt;\format[HTMLChars]{\journal}, &lt;/em&gt;\end{journal}__NEWLINE__\begin{booktitle} &lt;em&gt;\format[HTMLChars]{\booktitle}, &lt;/em&gt;\end{booktitle}__NEWLINE__\begin{school} &lt;em&gt;\format[HTMLChars]{\school}, &lt;/em&gt;\end{school}__NEWLINE__\begin{institution} &lt;em&gt;\format[HTMLChars]{\institution}, &lt;/em&gt;\end{institution}__NEWLINE__\begin{publisher} &lt;em&gt;\format[HTMLChars]{\publisher}, &lt;/em&gt;\end{publisher}__NEWLINE__\begin{year}&lt;b&gt;\year&lt;/b&gt;\end{year}\begin{volume}&lt;i&gt;, \volume&lt;/i&gt;\end{volume}\begin{pages}, \format[FormatPagesForHTML]{\pages} \end{pages}__NEWLINE__\begin{abstract}&lt;BR&gt;&lt;BR&gt;&lt;b&gt;Abstract: &lt;/b&gt; \format[HTMLChars]{\abstract} \end{abstract}__NEWLINE__\begin{review}&lt;BR&gt;&lt;BR&gt;&lt;b&gt;Review: &lt;/b&gt; \format[HTMLChars]{\review} \end{review}&lt;/dd&gt;__NEWLINE__&lt;p&gt;&lt;/p&gt;&lt;/font&gt;"/>
 <entry key="priDescending" value="false"/>
 <entry key="priSort" value="author/editor"/>
@@ -141,7 +147,7 @@
 <entry key="proxyPort" value="80"/>
 <entry key="proxyUsername" value=""/>
 <entry key="pushToApplication" value="TeXstudio"/>
-<entry key="recentDatabases" value="/mnt/data/shared/gmaildrive/papers/_bibtex/atmos_combined.bib;/mnt/data/shared/gmaildrive/papers/_bibtex/ComputerScience.bib;/home/shichu/data/shared/gmaildrive/papers/_bibtex/ComputerScience.bib;/home/shichu/data/shared/gmaildrive/papers/_bibtex/HIWC_Related.bib"/>
+<entry key="recentDatabases" value="/home/shichu/Downloads/citation-283311548.bib;/mnt/data/shared/gmaildrive/papers/_bibtex/Atmos_Book.bib;/mnt/data/shared/gmaildrive/papers/_bibtex/ComputerScience.bib;/home/shichu/data/shared/gmaildrive/papers/_bibtex/atmos_combined.bib;/mnt/data/shared/gmaildrive/papers/_bibtex/atmos_combined.bib;/home/shichu/data/shared/gmaildrive/papers/_bibtex/ComputerScience.bib;/home/shichu/data/shared/gmaildrive/papers/_bibtex/HIWC_Related.bib"/>
 <entry key="reformatFileOnSaveAndExport" value="false"/>
 <entry key="remoteServerPort" value="6050"/>
 <entry key="resolveStringsAllFields" value="false"/>
@@ -149,10 +155,18 @@
 <entry key="secDescending" value="false"/>
 <entry key="secSort" value=""/>
 <entry key="selectedFetcherIndex" value="4"/>
+<entry key="serializeSpecialFields" value="false"/>
+<entry key="showPrintedColumn" value="false"/>
+<entry key="showPriorityColumn" value="true"/>
+<entry key="showQualityColumn" value="false"/>
+<entry key="showRankingColumn" value="false"/>
+<entry key="showReadColumn" value="true"/>
 <entry key="showRecommendations" value="true"/>
+<entry key="showRelevanceColumn" value="false"/>
 <entry key="sidePaneComponentNames" value="org.jabref.gui.importer.fetcher.GeneralFetcher;org.jabref.gui.groups.GroupSidePane"/>
 <entry key="sidePaneComponentPreferredPositions" value="1;0"/>
 <entry key="sidePaneWidth" value="273"/>
+<entry key="specialFieldsEnabled" value="true"/>
 <entry key="tableBackground" value="255:255:255"/>
 <entry key="tableColorCodesOn" value="false"/>
 <entry key="tableOptFieldBackground" value="230:255:230"/>
@@ -187,7 +201,7 @@
 <entry key="warnBeforeOverwritingKey" value="false"/>
 <entry key="webSearchVisible" value="true"/>
 <entry key="windowMaximised" value="true"/>
-<entry key="workingDirectory" value="/mnt/data/shared/gmaildrive/papers/ATMOS/Coutris/Coutris2017 - An Inverse Problem Approach for the Retrieval of Ice Particle Mass from in Situ Measurements.pdf"/>
+<entry key="workingDirectory" value="/home/shichu/Downloads"/>
 </map>
 <node name="bibtexkeypatterns">
 <map/>
