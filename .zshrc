@@ -107,6 +107,8 @@ setopt shwordsplit
 
 # zmv command to batch rename files
 autoload zmv
+# zsh extended_glob support reverse selection rm -- ^*.txt
+setopt extended_glob
 
 # For zsh-syntax-highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
