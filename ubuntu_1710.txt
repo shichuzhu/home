@@ -155,6 +155,13 @@ sudo apt-get install drive
 
 To switch CAPS and ESC, go to tweak-tool --> keyboard & mouse -> additional layout --> caps --> ...
 
+Adjust swapiness of system:
+edit file /etc/sysctl.conf
+Add lines:
+vm.swappiness = 85
+fs.inotify.max_user_watches = 524288
+ref: https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
+
 ################################################ Chromebook installation log ################################
 Enable debugging feature, latter to setup the chronos passwd:
 https://github.com/dnschneid/crouton/issues/2050#issuecomment-322681627
