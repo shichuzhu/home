@@ -52,3 +52,6 @@ source /opt/intel/bin/compilervars.sh intel64
 
 # julia
 export PATH="$HOME/usr/julia/julia-1.0.0/bin:$PATH"
+
+# thefuck
+eval $(thefuck --alias f)
