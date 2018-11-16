@@ -115,4 +115,5 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/vendor-completions/_tmuxinator
 
 export FLAG_ZSH=True
+. /usr/share/autojump/autojump.sh
 . $HOME/.sz_shrc.bash
