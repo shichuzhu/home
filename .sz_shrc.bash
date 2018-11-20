@@ -50,7 +50,7 @@ export PATH="/home/shichu/usr/anaconda3/bin:$PATH"
 export BROWSER=google-chrome
 
 # For Apache hadoop / spark
-export PATH="/home/shichu/usr/apache/hadoop-3.0.0/bin:/home/shichu/usr/apache/spark-2.3.0-bin-hadoop2.7/bin:$PATH"
+export PATH="/home/shichu/usr/apache/hadoop/bin:/home/shichu/usr/apache/spark/bin:$PATH"
 
 # For src compiled programs (protoc)
 export PATH="$HOME/usr/local/bin:$PATH"
