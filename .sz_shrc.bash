@@ -66,8 +66,5 @@ source /opt/intel/bin/compilervars.sh intel64
 # compiled using g++ -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5
 # https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor
 
-# julia
-export PATH="$HOME/usr/julia/julia-1.0.0/bin:$PATH"
-
 # thefuck
 eval $(thefuck --alias f)
