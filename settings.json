@@ -54,5 +54,7 @@
     "vim.easymotion": false,
     "vim.hlsearch": true,
     "java.errors.incompleteClasspath.severity": "ignore",
-    "workbench.colorTheme": "Monokai"
+    "workbench.colorTheme": "Monokai",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true
 }
