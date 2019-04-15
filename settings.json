@@ -1,4 +1,24 @@
 {
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "j"
+            ],
+            "after": [
+                "g",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "k"
+            ],
+            "after": [
+                "g",
+                "k"
+            ]
+        }
+    ],
     "keyboard.dispatch": "keyCode",
     "editor.wordWrap": "on",
     "C_Cpp.clang_format_fallbackStyle": "Google",
@@ -56,5 +76,11 @@
     "java.errors.incompleteClasspath.severity": "ignore",
     "workbench.colorTheme": "Monokai",
     "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true
+    "gitlens.views.lineHistory.enabled": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "cSpell.userWords": [
+        "shichu",
+        "szhu"
+    ]
 }

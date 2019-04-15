@@ -2,7 +2,7 @@
 #alias kl="ssh -X $KEELING"
 #alias pfwd="ssh -N -f -L 8103:localhost:8103 $KEELING"
 #alias klpy="ssh $KEELING 'screen -dm bash -c ipynbhpc'"
-alias odir="xdg-open . 2>/dev/null"
+alias odir="xdg-open . &>/dev/null"
 
 export EDITOR="vim"
 export KL="szhu28@keeling.earth.illinois.edu"
