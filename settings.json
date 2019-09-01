@@ -82,5 +82,6 @@
     "cSpell.userWords": [
         "shichu",
         "szhu"
-    ]
+    ],
+    "python.jediEnabled": false
 }

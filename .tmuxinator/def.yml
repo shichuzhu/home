@@ -32,7 +32,7 @@ root: ~/
 
 windows:
   - editor:
-      root: /mnt/data/shared/uiucgdrive/workspace/sp19byclass/CS461/mpWks/szhu28
+      root: /mnt/data/shared/uiucgdrive/workspace/fa19byclass
       layout: even-horizontal
       # layout: main-vertical
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
