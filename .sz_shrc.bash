@@ -53,11 +53,5 @@ export PATH="/home/shichu/usr/apache/hadoop/bin:/home/shichu/usr/apache/spark/bi
 # For src compiled programs (protoc)
 export PATH="$HOME/usr/local/bin:$PATH"
 
-# For intel MKL
-# https://gist.github.com/pachamaltese/afc4faef2f191b533556f261a46b3aa8
-source /opt/intel/bin/compilervars.sh intel64
-# compiled using g++ -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5
-# https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor
-
 # thefuck
 eval $(thefuck --alias f)
