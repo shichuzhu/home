@@ -114,5 +114,15 @@ setopt extended_glob
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/vendor-completions/_tmuxinator
 
+preexec() {
+    cmd_start="$SECONDS"
+}
+PS1_TEMPLATE=$PS1
+precmd() {
+  local cmd_end="$SECONDS"
+  elapsed=$((cmd_end-cmd_start))
+  PS1="${elapsed} s${PS1_TEMPLATE}"
+}
+
 export FLAG_ZSH=True
 . $HOME/.sz_shrc.bash
