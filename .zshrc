@@ -115,14 +115,19 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/vendor-completions/_tmuxinator
 
 preexec() {
-    cmd_start="$SECONDS"
+  cmd_start="$SECONDS"
+  PS1=$PREV_TEMPLATE
+  TMP_PS1=$PS1
 }
-PS1_TEMPLATE=" %D %*$PS1"
+PREV_TEMPLATE="%* %D$PS1"
 precmd() {
   local cmd_end="$SECONDS"
   elapsed=$((cmd_end-cmd_start))
-  PS1="\$ ${elapsed}s${PS1_TEMPLATE}"$'\n'"$ "
+  PREV_TEMPLATE=$PS1
+  PS1="\$ ${elapsed}s %* %D ${PREV_TEMPLATE}"$'\n'"$ "
 }
 
 export FLAG_ZSH=True
-. $HOME/.sz_shrc.bash
+
+# Add PATH configurations
+export PATH="/home/shichu/usr/anaconda3/bin:$PATH"
