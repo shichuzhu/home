@@ -117,14 +117,21 @@ source /usr/share/zsh/vendor-completions/_tmuxinator
 preexec() {
   cmd_start="$SECONDS"
   PS1=$PREV_TEMPLATE
-  TMP_PS1=$PS1
+  PS1_RESET=true
 }
 PREV_TEMPLATE="%* %D$PS1"
+PS1_RESET=true
 precmd() {
-  local cmd_end="$SECONDS"
-  elapsed=$((cmd_end-cmd_start))
-  PREV_TEMPLATE=$PS1
+  if [ "$PS1_RESET" = true ]
+  then
+    local cmd_end="$SECONDS"
+    elapsed=$((cmd_end-cmd_start))
+    PREV_TEMPLATE=$PS1
+  else
+    elapsed=0
+  fi
   PS1="\$ ${elapsed}s %* %D ${PREV_TEMPLATE}"$'\n'"$ "
+  PS1_RESET=false
 }
 
 export FLAG_ZSH=True
