@@ -135,5 +135,4 @@ precmd() {
 }
 
 export FLAG_ZSH=True
-. /usr/share/autojump/autojump.sh
 . $HOME/.sz_shrc.bash

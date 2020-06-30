@@ -52,6 +52,3 @@ export PATH="/home/shichu/usr/apache/hadoop/bin:/home/shichu/usr/apache/spark/bi
 
 # For src compiled programs (protoc)
 export PATH="$HOME/usr/local/bin:$PATH"
-
-# thefuck
-eval $(thefuck --alias f)

@@ -32,15 +32,15 @@ root: ~/
 
 windows:
   - editor:
-      root: /mnt/data/shared/uiucgdrive/workspace/fa19byclass
+      root: /home/shichu/finance
       layout: even-horizontal
       # layout: main-vertical
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        -
-        -
+        - source activate finance ; export PYTHONPATH=/home/shichu/finance
+        - cd data
   - server:
       layout: even-vertical
       panes:
