@@ -1,10 +1,5 @@
 # home
-Some customized config files for my linux machine
 
-# Suggested workflow:
-- For machine specific settings, commit to corresponding branches.
-- For universal settings, commit to master branch, and then regularly merge master into each other branches.
+Some customized config for setting up a new linux machine.
 
-# Misc
-## VSCode
-1. To make the system wide key-map work, need to set "keyboard.dispatch" to "keyCode" in setting. System-wide, use gnome-tweak-tool to set CapsLock behavior.
+See the instruction in init.sh for how to run the script.

@@ -1,0 +1,20 @@
+set hlsearch
+set ai
+set nu
+set ru
+set wildmenu
+set background=dark
+set mouse=a
+syntax on
+
+" Copy to clipboard in visual mode
+map<F5> :w !xsel -i -b<cr><cr>
+
+map<F2> :call AddCommentSHELL()<cr>
+func AddCommentSHELL()
+	if (getline('.')[0] == '#')
+		normal ^x
+	else
+		:s/^/#/
+	endif
+endfunc

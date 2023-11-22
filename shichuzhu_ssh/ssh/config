@@ -1,0 +1,20 @@
+Host *.ddns.net
+  HostName {{DESKTOP_DOMAIN}}
+  User shichuzhu
+  ForwardX11 yes
+  ForwardX11Timeout 0
+  Compression yes
+
+  # Always use SSH2.
+  Protocol 2
+
+  # ssh will disconnect if it can't reach the server for 10 seconds (defaults are way to high)
+  ServerAliveInterval 1
+  ServerAliveCountMax 10
+
+  # Use a shared channel for all sessions to the same host,
+  # instead of always opening a new one. This leads to much
+  # quicker connection times.
+  ControlMaster auto
+  ControlPath /tmp/ssh-master-%r@%n:%p
+  ControlPersist yes
