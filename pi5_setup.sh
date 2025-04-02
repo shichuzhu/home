@@ -29,8 +29,13 @@ rpi-connect signin || true
 sudo -k chsh -s $(command -v zsh) "$USER"
 # >>>>>>>>>>>>> INTERACTIVE END >>>>>>>>>>>>>>
 
+# install atuin
 echo '. "$HOME/.atuin/bin/env"' >> $HOME/.sz_shrc.bash
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+
+# install juicefs
+# default installation path is /usr/local/bin
+curl -sSL https://d.juicefs.com/install | sh -
 
 sudo apt autoremove -y
 
