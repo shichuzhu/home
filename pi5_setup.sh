@@ -29,6 +29,7 @@ rpi-connect signin || true
 sudo -k chsh -s $(command -v zsh) "$USER"
 # >>>>>>>>>>>>> INTERACTIVE END >>>>>>>>>>>>>>
 
+echo '. "$HOME/.atuin/bin/env"' >> $HOME/.sz_shrc.bash
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 
 sudo apt autoremove -y
