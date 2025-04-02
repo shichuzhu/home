@@ -39,4 +39,7 @@ curl -sSL https://d.juicefs.com/install | sh -
 
 sudo apt autoremove -y
 
+# Append to this file to mitigate the error “<jemalloc>: Unsupported system page size”
+echo 'kernel=kernel8.img' | sudo tee -a /boot/firmware/config.txt
+
 echo END OF SCRIPT!
