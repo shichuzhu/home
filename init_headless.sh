@@ -14,7 +14,7 @@ set -e
 
 WORKDIR=$PWD
 
-sudo apt install -y tmux tmuxinator git stow fonts-powerline
+sudo apt install -y vim tmux tmuxinator git stow fonts-powerline
 
 # clean start
 rm -rf $HOME/.oh-my-zsh $HOME/.dotfiles
@@ -40,6 +40,7 @@ mkdir -p $DD/shichuzhu_ssh/.ssh
 mkdir -p $DD/shichuzhu_vim
 mkdir -p $DD/shichuzhu_zsh
 mkdir -p $DD/shichuzhu_gpakosz_tmux
+mkdir -p $DD/shichuzhu_pref
 
 # Delete existing to avoid conflict.
 rm $HOME/.ssh/config || true

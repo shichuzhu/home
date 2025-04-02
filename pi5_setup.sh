@@ -20,7 +20,8 @@ rpi-connect on
 
 # <<<<<<<<<<<<< INTERACTIVE START <<<<<<<<<<<<
 # This will block until registered.
-rpi-connect signin
+# Mute already signed in error
+rpi-connect signin || true
 # >>>>>>>>>>>>> INTERACTIVE END >>>>>>>>>>>>>>
 
 ./init_headless.sh
@@ -30,6 +31,6 @@ sudo -k chsh -s $(command -v zsh) "$USER"
 
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 
-sudo apt autoremove
+sudo apt autoremove -y
 
 echo END OF SCRIPT!
