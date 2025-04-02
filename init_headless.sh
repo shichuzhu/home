@@ -1,6 +1,7 @@
 #!/usr/bin/zsh
 
 # This scripts must be run after zsh is installed.
+# This script is meant to be run without any input prompt.
 # This scripts shall be run with its directory as the working directory.
 # Replace placeholder {{DESKTOP_DOMAIN}} with desktop hostname in
 #   1. shichuzhu_zsh/sz_shrc.bash
@@ -8,17 +9,19 @@
 
 # Echo commands while executing.
 setopt verbose
+# Stop on error
+set -e
 
 WORKDIR=$PWD
 
-sudo apt install tmux xsel tmuxinator git stow fonts-powerline
-sudo apt install parcellite
+sudo apt install -y tmux tmuxinator git stow fonts-powerline
 
 # clean start
 rm -rf $HOME/.oh-my-zsh $HOME/.dotfiles
 
 # install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# To install automatically without prompt https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 cd ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins
 git clone https://github.com/zsh-users/zsh-completions
 git clone https://github.com/djui/alias-tips.git
@@ -38,19 +41,14 @@ mkdir -p $DD/shichuzhu_vim
 mkdir -p $DD/shichuzhu_zsh
 mkdir -p $DD/shichuzhu_gpakosz_tmux
 
-mkdir -p $DD/shichuzhu_pref/.config/parcellite
-mkdir -p $DD/shichuzhu_pref/.config/dconf
-
 # Delete existing to avoid conflict.
-rm $HOME/.ssh/config
-rm $HOME/.vimrc
-rm $HOME/.zshrc
-rm $HOME/.sz_shrc.bash
-rm "$HOME/.tmux.conf.local"
-rm "$HOME/.tmux.conf"
-rm -rf $HOME/.tmuxinator
-
-rm -rf $HOME/.config/dconf $HOME/.config/parcellite
+rm $HOME/.ssh/config || true
+rm $HOME/.vimrc || true
+rm $HOME/.zshrc || true
+rm $HOME/.sz_shrc.bash || true
+rm "$HOME/.tmux.conf.local" || true
+rm "$HOME/.tmux.conf" || true
+rm -rf $HOME/.tmuxinator || true
 
 # Use non-hidden files.
 # Explicit replace default config with my own.
@@ -63,9 +61,6 @@ cp -r shichuzhu_pref/tmuxinator $DD/shichuzhu_pref/.tmuxinator
 # Copy the tmux.conf file to stage to symlink.
 cp "$DD/.tmux/.tmux.conf" "$DD/shichuzhu_gpakosz_tmux/.tmux.conf"
 
-cp shichuzhu_pref/config/parcellite/parcelliterc $DD/shichuzhu_pref/.config/parcellite/
-cp shichuzhu_pref/config/dconf/user $DD/shichuzhu_pref/.config/dconf/
-
 cd $DD
 # Symlink to dotfiles.
 # stow -nvt ~ shichuzhu_ssh # dry-run if necessary
@@ -73,9 +68,6 @@ stow -vSt ~ shichuzhu_ssh
 stow -vSt ~ shichuzhu_vim
 stow -vSt ~ shichuzhu_zsh
 stow -vSt ~ shichuzhu_gpakosz_tmux
-stow -vSt ~ shichuzhu_pref
 
-# guake
 cd $WORKDIR
-sudo apt install guake
-guake --restore-preferences guake_prefs
+
