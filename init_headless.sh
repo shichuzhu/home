@@ -69,6 +69,7 @@ stow -vSt ~ shichuzhu_ssh
 stow -vSt ~ shichuzhu_vim
 stow -vSt ~ shichuzhu_zsh
 stow -vSt ~ shichuzhu_gpakosz_tmux
+stow -vSt ~ shichuzhu_pref
 
 cd $WORKDIR
 
