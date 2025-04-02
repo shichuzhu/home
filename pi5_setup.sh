@@ -15,6 +15,7 @@ sudo apt update
 sudo apt full-upgrade -y
 sudo apt upgrade -y
 sudo apt install -y git rpi-connect zsh
+sudo apt install -y git wireguard resolvconf
 
 rpi-connect on
 
