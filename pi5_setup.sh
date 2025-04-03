@@ -37,6 +37,12 @@ curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 # default installation path is /usr/local/bin
 curl -sSL https://d.juicefs.com/install | sh -
 
+# install miniconda
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm ~/miniconda3/miniconda.sh
+
 sudo apt autoremove -y
 
 # Append to this file to mitigate the error “<jemalloc>: Unsupported system page size”
